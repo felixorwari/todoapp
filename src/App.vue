@@ -6,10 +6,8 @@ import SettingsIcon from './components/Icons/SettingsIcon.vue'
 </script>
 
 <template>
-  <header class="sticky top-0 z-50">
-    <div
-      class="w-full max-w-screen-xl px-4 mx-auto border-b border-gray-200 shadow-2xl shadow-gray-200 sm:shadow-none bg-white/80 backdrop-blur"
-    >
+  <header class="sticky top-0 z-50 border-b border-gray-200 shadow-2xl shadow-gray-200">
+    <div class="w-full max-w-screen-xl px-4 mx-auto bg-white/80 backdrop-blur">
       <nav class="flex items-center gap-8 pt-4 text-gray-500 max-w-fit">
         <RouterLink
           :to="{ name: 'tasks' }"
@@ -39,5 +37,13 @@ import SettingsIcon from './components/Icons/SettingsIcon.vue'
     </div>
   </header>
 
-  <RouterView />
+  <main class="w-full max-w-screen-xl min-h-screen px-4 py-12 mx-auto">
+    <RouterView />
+  </main>
+
+  <footer class="px-4 py-12 border-t border-gray-200">
+    <div class="w-full max-w-screen-xl mx-auto mt-auto">
+      <p class="text-sm text-gray-500">&copy; 2024. Vijukumu. All rights reserved.</p>
+    </div>
+  </footer>
 </template>
