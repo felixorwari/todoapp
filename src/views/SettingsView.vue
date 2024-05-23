@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
+  <header>
     <h1 class="mb-6 text-4xl font-semibold">Settings</h1>
-  </div>
+  </header>
 </template>
