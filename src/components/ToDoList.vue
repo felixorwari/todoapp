@@ -6,7 +6,7 @@ const store = useTodoListStore()
 
 const { todoList } = storeToRefs(store)
 
-const { toggleCompleted } = store
+const { toggleCompleted, deleteTodo } = store
 </script>
 
 <template>
@@ -18,19 +18,31 @@ const { toggleCompleted } = store
   <div
     v-for="todo in todoList"
     :key="todo.id"
-    class="flex items-center px-6 py-4 bg-white border border-gray-200 rounded shadow"
+    class="flex items-start py-4 pl-6 bg-white border border-gray-200 rounded shadow"
   >
-    <div
+    <button
+      type="button"
+      title="Toggle completion"
       @click.stop="toggleCompleted(todo.id)"
-      :class="{ 'border-0': todo.completed }"
-      class="inline-block w-6 h-6 transition-all border border-gray-300 rounded-full hover:cursor-pointer"
+      :class="{ 'border-gray-300': !todo.completed }"
+      class="inline-flex w-6 h-6 transition-all border border-transparent rounded-full shrink-0"
     >
       <span v-show="todo.completed">&#10004;</span>
-    </div>
+    </button>
+
     <span
-      class="border-l border-gray-200 ms-4 ps-4"
+      class="w-full border-gray-200 border-x ms-4 ps-4"
       :class="{ 'line-through text-gray-400': todo.completed }"
       >{{ todo.item }}</span
     >
+
+    <button
+      type="button"
+      title="Delete"
+      @click="deleteTodo(todo.id)"
+      class="inline-flex px-4 transition-all ms-auto"
+    >
+      &#10060;
+    </button>
   </div>
 </template>
