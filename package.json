@@ -1,6 +1,6 @@
 {
-  "name": "todoapp",
-  "version": "0.0.0",
+  "name": "my-task-manager",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
