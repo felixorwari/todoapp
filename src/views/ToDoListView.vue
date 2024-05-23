@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import ToDoApp from '@/components/ToDoApp.vue'
+</script>
 <template>
-  <div></div>
+  <to-do-app />
 </template>
