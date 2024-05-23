@@ -41,8 +41,8 @@ import SettingsIcon from './components/Icons/SettingsIcon.vue'
     <RouterView />
   </main>
 
-  <footer class="px-4 py-12 border-t border-gray-200">
-    <div class="w-full max-w-screen-xl mx-auto mt-auto">
+  <footer class="py-12 border-t border-gray-200">
+    <div class="w-full max-w-screen-xl px-4 mx-auto mt-auto">
       <p class="text-sm text-gray-500">&copy; 2024. Vijukumu. All rights reserved.</p>
     </div>
   </footer>
