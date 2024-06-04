@@ -24,8 +24,8 @@ const { toggleCompleted, deleteTodo } = store
       type="button"
       title="Toggle completion"
       @click.stop="toggleCompleted(todo.id)"
-      :class="{ 'border-gray-300': !todo.completed }"
-      class="inline-flex w-6 h-6 transition-all border border-transparent rounded-full shrink-0"
+      :class="[ todo.completed ? 'border-transparent' : 'border-gray-300']"
+      class="inline-flex w-6 h-6 transition-all border rounded shrink-0"
     >
       <span v-show="todo.completed">&#10004;</span>
     </button>
